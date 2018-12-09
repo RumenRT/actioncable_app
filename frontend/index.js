@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ChatRoom from './ChatRoom.js'
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root")
-  ReactDOM.render(<h1>React frontend test message</h1>, root)
+  ReactDOM.render(<ChatRoom />, root)
 })
