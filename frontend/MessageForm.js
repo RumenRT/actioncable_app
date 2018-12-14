@@ -8,7 +8,7 @@ class MessageForm extends React.Component {
 
   update(field) {
     return e => 
-      this.setState({ [field]: e.current.target.value })
+      this.setState({ [field]: e.currentTarget.value })
   }
 
   handleSubmit(e) {

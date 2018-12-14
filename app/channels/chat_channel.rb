@@ -8,6 +8,7 @@ class ChatChannel < ApplicationCable::Channel
     if message.save
       socket = { message: message.body, type: 'message' }
       ChatChannel.broadcast_to('chat_channel', socket)
+    end
   end
 
   def load
@@ -16,7 +17,6 @@ class ChatChannel < ApplicationCable::Channel
     ChatChannel.broadcast_to('chat_channel', socket)
   end
 
-  def unsubscribed
+  def unsubscribed; end
     # Any cleanup needed when channel is unsubscribed
-  end
 end
